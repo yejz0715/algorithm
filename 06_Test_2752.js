@@ -9,7 +9,7 @@ function solution(input) {
     let b=Number(numArr[1]);
     let c=Number(numArr[2]);
    
-    var arr=[a,b,c];
+    let arr=[a,b,c];
          
     console.log(`${arr.sort()}`);
      
