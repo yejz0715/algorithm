@@ -1,7 +1,7 @@
 const readline = require("readline");
-
+//출력o, 백준출력x
 //엄청난 부자:n(돈),m(생명체), answer1(한명당 나눠줄수있는돈),answer2(나머지)
-
+//(1 ≤ m ≤ n ≤ 101000, m과 n은 10진수 정수)
 function solution(input) { 
  
   let result=input; 
