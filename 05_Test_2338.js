@@ -1,9 +1,9 @@
 const readline = require("readline");
 
-//긴자리 계산 
+//긴자리 계산 //첫째줄에 n, 둘째줄에 m 입력
 function solution(input) { 
     let result=input; 
-    let numArr = result.split(" "); 
+    let numArr = result.split(' '); 
     
     let n=Number(numArr[0]);  
     let m=Number(numArr[1]);
