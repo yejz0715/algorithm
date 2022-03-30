@@ -17,5 +17,5 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", (line) => {
-  console.log(solution(line));
+ solution(line);
 });
