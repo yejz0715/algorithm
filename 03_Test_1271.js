@@ -1,5 +1,5 @@
 const readline = require("readline");
-//출력o, 백준출력x
+
 //엄청난 부자:n(돈),m(생명체), answer1(한명당 나눠줄수있는돈),answer2(나머지)
 //(1 ≤ m ≤ n ≤ 101000, m과 n은 10진수 정수)
 function solution(input) {
@@ -9,7 +9,7 @@ function solution(input) {
   let n = BigInt(numArr[0]);
   let m = BigInt(numArr[1]);
   //Number->BigInt :입력받는 수가 상당히 크다는 것을 인지하고 Number 값이 안정적으로 나타낼 수 있는 최대치보다 더 큰 정수를 표현할 수 있는 내장 객체
-//대게 큰 정수가 나올수 있다는것도 생각해서 BigInt 사용 
+  //대게 큰 정수가 나올수 있다는것도 생각해서 BigInt 사용
   const answer1 = n / m;
   const answer2 = n % m;
 
