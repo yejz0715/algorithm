@@ -21,7 +21,7 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", (line) => {
-  //console.log(typeof line); 변수의 타입을 알고싶을때 사용
+  //console.log(typeof line); typeof:변수의 타입을 알고싶을때 사용
 
   //첫째줄, 둘째줄에 입력을 받고싶을때
   input.push(BigInt(line)); //입력한 값(line)의 type을 String->BigInt형으로 배열 input에 삽입
