@@ -1,8 +1,11 @@
+//입력한 숫자 1부터 한줄씩 출력
 const readline = require("readline");
 function solution(input) {
-  for (i = 1; i <= input; i++) {
-    console.log(BigInt(i));
+  let answer = "";
+  for (let i = 1; i <= input; i++) {
+    answer += i + "\n"; //answer=answer+i+"\n"
   }
+  return answer;
 }
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,5 +13,5 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", (line) => {
-  solution(line);
+  console.log(solution(line));
 });
