@@ -1,4 +1,4 @@
-//시험성적-if문으로 점수입력하면 A~F로 표시 
+//시험성적-if문으로 점수입력하면 A~F로 표시
 //조건: 시험 점수는 0보다 크거나 같고, 100보다 작거나 같은 정수이다.
 const readline = require("readline");
 function solution(input) {
