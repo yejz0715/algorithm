@@ -1,10 +1,11 @@
 //세정수중 두번째로 큰 정수 출력
 const readline = require("readline");
 function solution(input) {
-  numArr = input.split("");
-  let answer = [];
-  numArr.sort = answer;
-  console.log(numArr);
+  let numArr = input.split(" ");
+  numArr.sort((a, b) => a - b);
+  //console.log(numArr);
+  const answer = numArr[1];
+  return answer;
 }
 const rl = readline.createInterface({
   input: process.stdin,
@@ -12,5 +13,5 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", (line) => {
-  solution(line);
+  console.log(solution(line));
 });
