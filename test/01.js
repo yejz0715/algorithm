@@ -30,7 +30,7 @@ const {
   studySubjects,
 } = me;
 const indexBoy = dinner.split(" ").indexOf("boyfriend") + 1;
-console.log(indexBoy);
+console.log(`boyfriend는 ${indexBoy}번째`);
 
 // 3. studySubjects에 요소들 중 JS를 포함하는 문자열을 찾아 Javascript로 변경하고, changedSubjects라는 이름의 변수를 만들어 새로운 배열을 저장하세요. + 출력
 
@@ -45,15 +45,14 @@ console.log(changedSubjects);
 const indexSubjects = changedSubjects.map(
   (changedSubjects, index) => ` ${index + 1}. ${changedSubjects}`
 );
-console.log(indexSubjects.join().replaceAll(","));
+console.log(indexSubjects.join().replaceAll(",", " "));
 
 // hint: this를 사용하여 객체의 속성에 접근할 수 있습니다.
 // 5. 다음과 같은 결과를 리턴하는 introduceMe함수를 완성해보세요. (출력 형식 - Hi! I'm Yeji Lee, my favorite food is Pizza!!)
 
-const { lastName } = me;
 function introduceMe() {
-  let introMsg = `Hi! I'm ${this.lastName}`;
-  //return introMsg;
+  let introMsg = `Hi! I'm ${this.lastName} ${this.firstName}, my favorite food is ${this.favoriteFood}!!`;
+
   console.log(introMsg);
 }
-introduceMe(this);
+me.introduce();
