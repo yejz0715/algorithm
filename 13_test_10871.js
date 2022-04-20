@@ -2,19 +2,17 @@
 const readline = require("readline");
 function solution(input) {
   let numArr = input[0].split(" ");
-  //let n = Number(numArr[0]);
   let x = Number(numArr[1]);
   let nArr = input[1].split(" ");
+  let answer = "";
 
-  for (i = 0; i < nArr.length; i++) {
-    if (nArr[i] < x)
-      //nArr.map((num) => answer.Number(num));
-      //return answer;
-      console.log(nArr[i]);
+  for (i = 0; i <= nArr.length; i++) {
+    if (Number(nArr[i]) < x) answer += nArr[i] + " ";
   }
+  return answer;
 }
 
-let arr = []; // 2줄로 입력할 값을 넣을 수 있게 함수 밖에 arr 배열을 만들어줌
+let arr = []; // 2줄로 입력할 값을 넣을 수 있게 함수 밖에 arr 배열을 만들
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
