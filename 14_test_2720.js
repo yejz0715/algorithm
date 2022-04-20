@@ -6,12 +6,14 @@ function solution(input) {
   const nick = 5;
   const penny = 1;
 
-  const a = input[1];
-  console.log(
-    `${a / quater} ${a / quater / dime} ${a / quater / dime / nick} ${
-      a / quater / dime / nick / penny
-    }`
-  );
+  //const i = input[i];
+  for (i = 1; i <= input.length; i++) {
+    const a = input[i] / quater;
+    const b = a / dime;
+    const c = b / nick;
+    const d = c / penny;
+    console.log(`${a} ${b} ${c} ${d}`);
+  }
 }
 let arr = [];
 const rl = readline.createInterface({
