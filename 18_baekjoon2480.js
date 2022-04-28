@@ -20,7 +20,7 @@ function solution(input) {
     answer = same * 100 + 1000;
     return answer;
   } else {
-    //다 다른수 나왔을 때
+    //세개의 수가 다 다른수가 나왔을 때
     answer = Math.max(one, two, three) * 100;
     return answer;
   }
