@@ -8,18 +8,22 @@
 */
 const readline = require("readline");
 function solution(input) {
-  let answer = [];
-  let sum = [];
-  let sumNum;
+  let sum = Number.MIN_SAFE_INTEGER;
+  let maxSum = 0;
+  let index;
   for (i = 0; i < input.length; i++) {
     sum = input[i]
       .split(" ")
       .map((num) => Number(num))
-      .reduse((acc, cur, index) => {
+      .reduce((acc, cur) => {
         return (acc += cur);
       }, 0);
-    console.log(sum);
+    if (maxSum < sum) {
+      maxSum = sum;
+      index = i + 1;
+    }
   }
+  return index + " " + maxSum;
 }
 let arr = [];
 const rl = readline.createInterface({
@@ -29,7 +33,6 @@ const rl = readline.createInterface({
 rl.on("line", (line) => {
   arr.push(line);
   if (arr.length === 5) {
-    //console.log(solution(arr));
-    solution(arr);
+    console.log(solution(arr));
   }
 });
