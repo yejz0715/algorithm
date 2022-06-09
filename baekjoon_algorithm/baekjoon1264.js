@@ -2,6 +2,7 @@
 const readline = require("readline");
 function solution(input) {
   let message = input;
+  for (let i = 0; i < message.length; i++) {}
 }
 let arr = [];
 const rl = readline.createInterface({

@@ -1,0 +1,4 @@
+wriBUGBUGtelBUGn("Hello B-U-G");
+
+hello worldBUBUGBUBUGGG!
+

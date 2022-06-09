@@ -1,10 +1,14 @@
 //버그왕
-const readline = require("readline");
-function solution(input) {}
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-rl.on("line", (line) => {
-  solution(line);
-});
+const input = require("fs")
+  .readFileSync("./baekjoon3447.txt")
+  .toString()
+  .split("\n");
+console.log(solution(input));
+function solution(input) {
+  let answer = [];
+  for (let i = 0; i < input.length; i++) {
+    answer += input[i].replaceAll("BUG", "") + "\n";
+  }
+
+  return answer;
+}
