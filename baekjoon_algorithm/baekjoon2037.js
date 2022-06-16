@@ -6,7 +6,7 @@ function solution(input) {
   let message = input[1].split("");
   let answer = 0;
 
-  //객체접근 phone[2]=>
+  //객체접근 phone[2] (숫자라 배열처럼 접근)
   const phone = {
     1: [" "],
     2: ["A", "B", "C"],
@@ -18,8 +18,18 @@ function solution(input) {
     8: ["T", "U", "V"],
     9: ["W", "X", "Y", "Z"],
   };
-  for (let i = 0; i < phone.length; i++) {
-    for (let j = 0; j < i.length; j++) {}
+  for (let i = 0; i < message.length; i++) {
+    //객체는 size/  indexof
+
+    for (let j = 1; j <= 9; j++) {
+      if (phone[j].indexOf(message[i] !== -1)) {
+        //phone[j]에 message[i]이 없다면(=-1)
+        console.log(
+          `${message[i]} 는 ${j}줄에 ${phone[j].indexOf(message[i])}`
+        );
+        break;
+      }
+    }
   }
 }
 let arr = [];
