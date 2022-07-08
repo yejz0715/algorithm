@@ -6,7 +6,7 @@ function solution(input) {
   for (let i = input; i > 1; i--) {
     answer += i - 1 + "\n";
   }
-  return input, answer;
+  return answer;
 }
 const rl = readline.createInterface({
   input: process.stdin,
