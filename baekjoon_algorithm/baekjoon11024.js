@@ -1,4 +1,4 @@
-// 더하기3
+// 더하기4 (백준에선 틀림->틀린이유 찾는중)
 const readline = require("readline");
 const solution = (input) => {
   let sum = 0;
@@ -7,8 +7,8 @@ const solution = (input) => {
     for (let j = 0; j < input[i].length; j++) {
       sum += Number(input[i][j]);
     }
-
     answer += sum + "\n";
+    sum = 0; //sum 초기화!
   }
 
   return answer;
