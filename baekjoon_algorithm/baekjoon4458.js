@@ -1,4 +1,4 @@
-//
+//첫글자를 대문자로
 const readline = require("readline");
 const solution = (input) => {
   let answer = "";
@@ -6,12 +6,15 @@ const solution = (input) => {
     for (let j = 0; j < input[i].length; j++) {
       if (input[i][j] === input[i][0]) {
         answer += input[i][0].toUpperCase();
-      } else {
-        answer += input[i][j];
+        break;
       }
+    }
+    for (let k = 1; k < input[i].length; k++) {
+      answer += input[i][k];
     }
     answer += "\n";
   }
+
   return answer;
 };
 let arr = [];
