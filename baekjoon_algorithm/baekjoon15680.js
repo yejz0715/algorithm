@@ -1,4 +1,4 @@
-//시험점수
+//연세대학교
 const readline = require("readline");
 function solution(input) {
   let answer = "";
@@ -7,7 +7,6 @@ function solution(input) {
     : (answer = "Leading the Way to the Future");
   return answer;
 }
-let arr = [];
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
