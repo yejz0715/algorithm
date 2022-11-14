@@ -1,21 +1,20 @@
 //점수계산
 const readline = require("readline");
 const solution = (input) => {
-  let count = "";
   let answer = "";
   for (let i = 0; i < input.length; i++) {
+    let count = 0;
+    let sum = 0;
+
     for (let j = 0; j < input[i].length; j++) {
       if (input[i][j] === "O") {
-        count += "^";
-        if (count === "^") {
-          count += "+";
-        }
+        count++;
       } else {
-        count += "";
+        count = 0;
       }
+      sum += count;
     }
-    answer += count + "\n";
-    count = 0;
+    answer += sum + "\n";
   }
   return answer;
 };
@@ -28,6 +27,7 @@ const rl = readline.createInterface({
 rl.on("line", (line) => {
   arr.push(line);
   if (arr.length - 1 === Number(arr[0])) {
+    arr.shift();
     console.log(solution(arr));
   }
 });
