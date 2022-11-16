@@ -2,11 +2,13 @@
 const readline = require("readline");
 function solution(input) {
   let answer = "";
+
   const sum = (acc, cur) => {
     acc = Number(acc);
     acc += Number(cur);
     return acc;
   };
+
   for (let i = 0; i < input.length; i++) {
     let num = 0;
     for (let j = 0; j < input[i].length; j++) {
