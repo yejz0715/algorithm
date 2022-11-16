@@ -2,38 +2,25 @@
 const readline = require("readline");
 function solution(input) {
   let answer = "";
-  let numArr = [];
-  let num = 0;
-  input
-    .map((item) =>
-      item
-        .split("")
-        .map((num) => Number(num))
-        .reduce((a, b) => a + b)
-        .toString()
-    )
-    .filter(function (item) {
-      if (item.length >= 2) {
-        numArr.push(
-          item
-            .split("")
-            .map((num) => Number(num))
-            .reduce((a, b) => a + b)
-        );
-      } else {
-        numArr.push(item);
-      }
-    });
-
-  for (let i = 0; i < numArr.length; i++) {
-    for (let j = 0; j < numArr[i].length; j++) {
-      if (num[i][j] >= 2) {
-        num += Number(num[i][j]);
-        answer += num + "\n";
-      } else {
-        answer += num[i][j] + "\n";
-      }
+  const sum = (acc, cur) => {
+    acc = Number(acc);
+    acc += Number(cur);
+    return acc;
+  };
+  for (let i = 0; i < input.length; i++) {
+    let num = 0;
+    for (let j = 0; j < input[i].length; j++) {
+      num += Number(input[i][j]);
     }
+    let nums = num.toString();
+    while (nums.length >= 2) {
+      nums = nums
+        .split("")
+        .map((item) => Number(item))
+        .reduce(sum);
+    }
+
+    answer += nums + "\n";
   }
   return answer;
 }
