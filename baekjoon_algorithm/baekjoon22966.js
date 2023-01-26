@@ -2,12 +2,17 @@
 const readline = require("readline");
 function solution(input) {
   let answer = "";
-  for (let i = 0; i < input.length; i++) {
-    let arr = input[i].split(" ");
-    let num = Math.min(Number(arr[1]));
-    answer = num;
+  let lines = input.map((item) => item.split(" ").reverse().join(""));
+  let minNum = lines.map((item) => Number(item[0])).sort((a, b) => a - b)[0];
+  for (let i = 0; i < lines.length; i++) {
+    for (let j = 1; j < lines[i].length; j++) {
+      if (minNum === Number(lines[i][0])) {
+        answer += lines[i][j];
+      }
+    }
   }
-  return num;
+
+  return answer;
 }
 let arr = [];
 const rl = readline.createInterface({
