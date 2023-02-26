@@ -1,4 +1,4 @@
-//
+//문자열
 const readline = require("readline");
 function solution(input) {
   let answer = "";
