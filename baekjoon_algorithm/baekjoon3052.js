@@ -6,7 +6,7 @@ function solution(input) {
   let answer = 0;
 
   arr.forEach((x) => {
-    //원래 있던 요소는 +1, 없다면 요소추가 + (+1)
+    //새로운 값이 들어오면 속성추가하고 && +1, 원래 있던 값이라면 같은 속성있으니깐 +1만 해줌,
     if (result[x]) {
       result[x] = result[x] + 1;
     } else {
