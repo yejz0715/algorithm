@@ -7,12 +7,16 @@
 */
 const readline = require("readline");
 function solution(input) {
-  let items = input.map((item) => item.split(" "));
-  let map = new Map(items.map((e) => [e[1], Number(e[0])]));
-  map = [...map].sort((a, b) => a[1] - b[1]);
-  for (let [k, v] of map) {
-    console.log(v, k);
+  let answer = "";
+  let items = input
+    .map((item) => item.split(" "))
+    .sort((a, b) => Number(a[0]) - Number(b[0]));
+
+  for (let i of items) {
+    answer += i[0] + " " + i[1] + "\n";
   }
+
+  return answer;
 }
 let arr = [];
 const rl = readline.createInterface({
@@ -23,6 +27,7 @@ rl.on("line", (line) => {
   arr.push(line);
   if (arr.length - 1 === Number(arr[0])) {
     arr.shift();
-    return solution(arr);
+    console.log(solution(arr));
+    rl.close();
   }
 });
