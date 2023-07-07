@@ -25,7 +25,6 @@ function solution(input) {
       }
     }
   }
-  console.log(changyoungScore, typeof changyoungScore);
   changyoungScore = 100 - changyoungScore;
   sangdeckScore = 100 - sangdeckScore;
   answer = changyoungScore + "\n" + sangdeckScore;
