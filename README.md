@@ -1,2 +1,3 @@
-# BAEKJOON_algorithm
-* 백준 알고리즘
+# 알고리즘 문제 풀이_JAVASCRIPT
+* baekjoon algorithm
+* programmers algorithm
