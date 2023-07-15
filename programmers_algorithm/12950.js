@@ -1,4 +1,4 @@
-//행렬의 덧셈
+//행렬의덧셈
 function solution(arr1, arr2) {
   let answer = [[]];
 
