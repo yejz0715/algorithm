@@ -1,4 +1,4 @@
-//무인도 여행
+//무인도 여행_bfs()
 function solution(maps) {
   const N = maps.length; //전체범위
   const M = maps[0].length;
