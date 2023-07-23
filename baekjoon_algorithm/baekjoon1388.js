@@ -11,7 +11,7 @@
 const readline = require("readline");
 function solution(input) {
   const [N, M] = input[0].split(" ").map(Number); //방 크기
-  const room = input.splice(1).map((line) => line.split("")); //바닥장식모
+  const room = input.splice(1).map((line) => line.split("")); //바닥장식모양
   const isVisited = Array.from({ length: N }, () => Array(M).fill(false)); //방문체크
 
   const dfs = (x, y) => {
