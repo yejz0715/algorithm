@@ -1,7 +1,7 @@
 //2644_촌수계산하기_dfs()
 /*
 9
-7 6
+7 3
 7
 1 2
 1 3
@@ -32,7 +32,7 @@ function solution(input) {
 
         // 종료조건
         if (node === end) {
-            return;
+            answer = cnt;
         }
 
         //매개변수의 그래프를 전체를 돌면서 확인
@@ -45,8 +45,9 @@ function solution(input) {
             dfs(i, cnt + 1);
         }
     };
+    let answer;
+    dfs(start, 0);
 
-    let answer = dfs(start, 0);
     return answer === undefined ? -1 : answer;
 }
 
@@ -57,7 +58,7 @@ const rl = readline.createInterface({
 });
 rl.on("line", (line) => {
     arr.push(line);
-    if (arr.length - 1 === Number(arr[0])) {
+    if (arr.length - 3 === Number(arr[2])) {
         console.log(solution(arr));
         rl.close();
     }
